@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Biblioteca Online</title>
+
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+
+    <!-- HOTBAR BY KAUAN-->
+
+    <header class="hotbar">
+
+        <div class="logo">
+            CPS
+        </div>
+
+        <div class="hotbar-icons">
+            <span>⌕</span>
+            <span>⚙</span>
+            <span>👤</span>
+        </div>
+
+    </header>
+
+    <!-- LOGIN -->
+
+    <main class="login-container">
+
+        <div class="login-box" id="login">
+
+            <div class="logo-login">
+                <img src="./source/image/logo.png" alt="Logo Centro Paula Souza">
+            </div>
+
+            <div class="texto">
+                <h1>Login</h1>
+
+                <p>
+                    Entre na sua conta para acessar a Biblioteca Online
+                </p>
+            </div>
+
+            <form>
+
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Digite seu email">
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha">
+                </div>
+
+                <div class="opcoes">
+
+                    <label>
+                        <input type="checkbox">
+                        Lembrar de mim
+                    </label>
+
+                    <a href="#">Esqueci minha senha</a>
+
+                </div>
+
+                <button type="submit">
+                    Entrar
+                </button>
+
+            </form>
+
+            <div class="cadastro">
+                <p>Não possui uma conta?</p>
+
+                <a href="#" onclick="mostrarCadastro()">
+                    Criar conta
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- CADASTRO -->
+
+        <div class="login-box cadastro-box" id="cadastro">
+
+            <div class="logo-login">
+                <img src="./source/image/logo.png" alt="Logo Centro Paula Souza">
+            </div>
+
+            <div class="texto">
+                <h1>Cadastro</h1>
+
+                <p>
+                    Crie sua conta para acessar a Biblioteca Online
+                </p>
+            </div>
+
+            <form>
+
+                <div class="campo">
+                    <label for="nome">Nome de usuário</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Digite seu nome"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email-cadastro">Email</label>
+
+                    <input
+                        type="email"
+                        id="email-cadastro"
+                        placeholder="Digite seu email"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="senha-cadastro">Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha-cadastro"
+                        placeholder="Digite sua senha"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="confirmar-senha">Confirmar senha</label>
+
+                    <input
+                        type="password"
+                        id="confirmar-senha"
+                        placeholder="Digite sua senha novamente"
+                    >
+                </div>
+
+                <button type="submit">
+                    Cadastrar
+                </button>
+
+            </form>
+
+            <div class="cadastro">
+
+                <p>Já possui uma conta?</p>
+
+                <a href="#" onclick="mostrarLogin()">
+                    Voltar para Login
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+ <!-- TROCA ENTRE LOGIN E CADASTRO -->
+
+    <script>
+
+        function mostrarCadastro() {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("cadastro").style.display = "block";
+        }
+
+        function mostrarLogin() {
+            document.getElementById("cadastro").style.display = "none";
+            document.getElementById("login").style.display = "block";
+        }
+
+    </script>
+
+</body>
+
+</html>
