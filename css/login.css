@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-top: 45px;
+    background:
+        radial-gradient(
+            circle at 20% 80%,
+            #542c7c 0%,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 80% 20%,
+            #183cbd 0%,
+            transparent 50%
+        ),
+        linear-gradient(
+            135deg,
+            #241b45,
+            #102b7c
+        );
+    color: white;
+}
+
+
+/* HOTBAR */
+
+.hotbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background-color: #252c4d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hotbar-icons {
+    display: flex;
+    gap: 15px;
+    color: white;
+    font-size: 15px;
+}
+
+.hotbar-icons span {
+    cursor: pointer;
+}
+
+.hotbar-icons span:hover {
+    color: #aaa;
+}
+
+
+/* LOGIN */
+
+.login-container {
+    width: 100%;
+    min-height: calc(100vh - 45px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* CAIXA LOGIN E CADASTRO */
+
+.login-box {
+    width: 380px;
+    padding: 35px 40px;
+    background-color: rgba(7, 17, 30, 0.90);
+    border-top: 3px solid #008c9a;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.cadastro-box {
+    width: 400px;
+    display: none;
+}
+
+
+/* LOGO */
+
+.logo-login img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+/* TEXTOS */
+
+.texto h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.texto p {
+    font-size: 11px;
+    opacity: 0.75;
+    margin-bottom: 25px;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.campo label {
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.campo input {
+    width: 100%;
+    height: 38px;
+    padding: 0 10px;
+    background-color: #071b25;
+    border: 1px solid #294354;
+    border-radius: 3px;
+    outline: none;
+    color: white;
+    font-size: 11px;
+}
+
+.campo input::placeholder {
+    color: #777;
+}
+
+.campo input:focus {
+    border-color: #00a7b5;
+}
+
+
+/* OPÇÕES */
+
+.opcoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 10px;
+    color: #aaa;
+}
+
+.opcoes label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.opcoes input {
+    accent-color: #008c9a;
+}
+
+.opcoes a {
+    color: #00a7b5;
+    text-decoration: none;
+}
+
+.opcoes a:hover {
+    text-decoration: underline;
+}
+
+
+/* BOTÃO */
+
+button {
+    width: 100%;
+    height: 38px;
+    border: none;
+    border-radius: 3px;
+    background-color: #008c9a;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00a7b5;
+}
+
+
+/* CADASTRO */
+
+.cadastro {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cadastro p {
+    display: inline;
+    font-size: 10px;
+    color: #aaa;
+}
+
+.cadastro a {
+    margin-left: 5px;
+    font-size: 10px;
+    color: #00a7b5;
+    text-decoration: none;
+}
+
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 500px) {
+
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-box {
+        width: 100%;
+        padding: 30px 25px;
+    }
+
+    .cadastro-box {
+        width: 100%;
+    }
+
+    .logo-login img {
+        width: 120px;
+    }
+
+    .texto h1 {
+        font-size: 22px;
+    }
+
+    .opcoes {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+}
