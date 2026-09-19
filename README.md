@@ -17,7 +17,7 @@ Estrutura para capas dos livros
 Estrutura para reservas/empréstimos
 ⚙️ Back-End — equipe
 
-Eles podem assumir depois:
+BACKEND
 
 Node.js
 JavaScript do servidor
