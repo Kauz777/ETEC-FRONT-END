@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- CONFIGURAÇÕES -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#7d1530"
+    >
+
+    <title>Biblioteca - BIBLIOTECH</title>
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="./css/livros.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- BACKGROUND -->
+
+    <div
+        class="background-layer"
+        aria-hidden="true"
+    >
+
+        <img
+            src="./source/Arthur/home/Group 631.png"
+            alt=""
+        >
+
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header class="topbar">
+
+
+        <!-- HOME -->
+
+        <a
+            class="brand"
+            href="./index.html"
+            aria-label="Voltar para o início"
+        >
+
+            <img
+                src="./source/image/logo.png"
+                alt="Centro Paula Souza"
+            >
+
+        </a>
+
+
+        <!-- BACKEND: PESQUISA DE LIVROS -->
+
+        <form
+            class="search"
+            id="form-pesquisa"
+        >
+
+            <label
+                class="sr-only"
+                for="busca"
+            >
+                Pesquisar livros
+            </label>
+
+            <input
+                id="busca"
+                name="busca"
+                type="search"
+                placeholder="Pesquisar livro..."
+                autocomplete="off"
+            >
+
+            <button
+                type="submit"
+                aria-label="Pesquisar"
+            >
+                ⌕
+            </button>
+
+        </form>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav
+            class="top-actions"
+            aria-label="Navegação principal"
+        >
+
+
+            <!-- BACKEND: MEUS LIVROS -->
+
+            <!-- BACKEND: MOSTRAR APENAS LOGADO -->
+            <a
+                class="logged-user-only"
+                href="#meus-livros"
+                title="Meus livros"
+            >
+                ▣
+            </a>
+
+
+            <!-- CONFIGURAÇÕES -->
+
+            <a
+                class="icon-button settings-button"
+                href="./login.html"
+                title="Configurações"
+                aria-label="Configurações"
+            >
+                ⚙
+            </a>
+
+
+            <!-- BACKEND: USUÁRIO -->
+
+            <a
+                class="icon-button profile-button"
+                href="./login.html"
+                title="Minha conta"
+                aria-label="Minha conta"
+            >
+                👤
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+
+    <main class="library-shell">
+
+
+        <!-- CABEÇALHO DA BIBLIOTECA -->
+
+        <section
+            class="library-header"
+            aria-labelledby="titulo-biblioteca"
+        >
+
+            <div>
+
+                <span class="eyebrow">
+                    BIBLIOTECH
+                </span>
+
+                <h1 id="titulo-biblioteca">
+                    Biblioteca Online
+                </h1>
+
+                <p>
+                    Encontre seus livros, consulte a disponibilidade
+                    e acesse sua conta.
+                </p>
+
+            </div>
+
+
+            <!-- BACKEND: LOGIN -->
+
+            <a
+                class="account-button"
+                href="./login.html"
+            >
+                Entrar na conta
+            </a>
+
+        </section>
+
+
+        <!-- BACKEND: FILTROS -->
+
+        <nav
+            class="library-tabs"
+            aria-label="Categorias da biblioteca"
+        >
+
+            <a
+                class="active"
+                href="#catalogo"
+                data-filtro="todos"
+            >
+                Todos
+            </a>
+
+            <a
+                href="#disponiveis"
+                data-filtro="disponivel"
+            >
+                Disponíveis
+            </a>
+
+            <a
+                href="#indisponiveis"
+                data-filtro="indisponivel"
+            >
+                Indisponíveis
+            </a>
+
+            <!-- BACKEND: MOSTRAR APENAS LOGADO -->
+            <a
+                class="logged-user-only"
+                href="#meus-livros"
+                data-filtro="meus-livros"
+            >
+                Meus livros
+            </a>
+
+        </nav>
+
+
+        <!-- BACKEND: MOSTRAR APENAS LOGADO -->
+        <section
+            class="book-section logged-user-only"
+            id="meus-livros"
+        >
+
+            <div class="section-title">
+                <h2>Seus Livros</h2>
+                <a href="#catalogo">Ver catálogo</a>
+            </div>
+
+            <!-- BACKEND: LIVROS DO USUÁRIO -->
+            <div
+                class="book-grid featured-grid"
+                id="lista-meus-livros"
+            >
+            </div>
+
+        </section>
+
+        <!-- CATÁLOGO -->
+
+        <section
+            class="book-section"
+            id="catalogo"
+        >
+
+
+            <!-- TÍTULO -->
+
+            <div class="section-title">
+
+                <h2>
+                    Livros Disponíveis
+                </h2>
+
+                <a
+                    href="#disponiveis"
+                    id="disponiveis"
+                >
+                    Ver todos
+                </a>
+
+            </div>
+
+
+            <!-- BACKEND: LISTA DE LIVROS -->
+
+            <div
+                class="book-grid"
+                id="lista-livros"
+            >
+
+                <!-- BACKEND: OS LIVROS DO MYSQL SERÃO INSERIDOS AQUI -->
+
+
+                <!-- LIVRO EXEMPLO -->
+
+                <article
+                    class="book-card compact"
+                    data-id="1"
+                    data-status="disponivel"
+                >
+
+
+                    <!-- BACKEND: CAPA DO LIVRO -->
+
+                    <div class="book-cover cover-blue">
+
+                        <span class="cover-small">
+                            QUARTO
+                        </span>
+
+                        <strong>
+                            DE DESPEJO
+                        </strong>
+
+                        <span class="cover-author">
+                            Carolina Maria de Jesus
+                        </span>
+
+                    </div>
+
+
+                    <!-- BACKEND: INFORMAÇÕES DO LIVRO -->
+
+                    <div class="book-info">
+
+                        <h3>
+                            Quarto de Despejo
+                        </h3>
+
+                        <p>
+                            Carolina Maria de Jesus
+                        </p>
+
+
+                        <!-- BACKEND: STATUS -->
+
+                        <span class="status available">
+                            Disponível
+                        </span>
+
+
+                        <!-- BACKEND: RESERVA -->
+
+                        <a
+                            class="book-button"
+                            href="./login.html"
+                            data-acao="reservar"
+                            data-livro-id="1"
+                        >
+                            Reservar
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIVRO EXEMPLO -->
+
+                <article
+                    class="book-card compact"
+                    data-id="2"
+                    data-status="disponivel"
+                >
+
+                    <div class="book-cover cover-red">
+
+                        <span class="cover-small">
+                            AS VEIAS
+                        </span>
+
+                        <strong>
+                            ABERTAS DA AMÉRICA LATINA
+                        </strong>
+
+                        <span class="cover-author">
+                            Eduardo Galeano
+                        </span>
+
+                    </div>
+
+
+                    <div class="book-info">
+
+                        <h3>
+                            As Veias Abertas da América Latina
+                        </h3>
+
+                        <p>
+                            Eduardo Galeano
+                        </p>
+
+                        <span class="status available">
+                            Disponível
+                        </span>
+
+                        <a
+                            class="book-button"
+                            href="./login.html"
+                            data-acao="reservar"
+                            data-livro-id="2"
+                        >
+                            Reservar
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIVRO EXEMPLO -->
+
+                <article
+                    class="book-card compact"
+                    data-id="3"
+                    data-status="disponivel"
+                >
+
+                    <div class="book-cover cover-green">
+
+                        <span class="cover-small">
+                            FERNANDO
+                        </span>
+
+                        <strong>
+                            PESSOA
+                        </strong>
+
+                        <span class="cover-author">
+                            Poesia selecionada
+                        </span>
+
+                    </div>
+
+
+                    <div class="book-info">
+
+                        <h3>
+                            Fernando Pessoa
+                        </h3>
+
+                        <p>
+                            Poesia selecionada
+                        </p>
+
+                        <span class="status available">
+                            Disponível
+                        </span>
+
+                        <a
+                            class="book-button"
+                            href="./login.html"
+                            data-acao="reservar"
+                            data-livro-id="3"
+                        >
+                            Reservar
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BACKEND: MAIS LIVROS PODEM SER GERADOS AQUI -->
+
+            </div>
+
+        </section>
+
+
+        <!-- LIVROS INDISPONÍVEIS -->
+
+        <section
+            class="book-section"
+            id="indisponiveis"
+        >
+
+
+            <!-- TÍTULO -->
+
+            <div class="section-title">
+
+                <h2>
+                    Livros Indisponíveis
+                </h2>
+
+                <span class="section-note">
+                    Aguardando devolução
+                </span>
+
+            </div>
+
+
+            <!-- BACKEND: LISTA DE LIVROS INDISPONÍVEIS -->
+
+            <div
+                class="book-grid unavailable-grid"
+                id="lista-indisponiveis"
+            >
+
+                <!-- BACKEND: OS LIVROS INDISPONÍVEIS SERÃO INSERIDOS AQUI -->
+
+
+                <!-- LIVRO EXEMPLO -->
+
+                <article
+                    class="book-card compact unavailable-card"
+                    data-id="4"
+                    data-status="indisponivel"
+                >
+
+
+                    <!-- BACKEND: CAPA -->
+
+                    <div class="book-cover cover-yellow locked">
+
+                        <span class="cover-small">
+                            O
+                        </span>
+
+                        <strong>
+                            DEFEITO<br>
+                            DE COR
+                        </strong>
+
+                        <span class="lock">
+                            ▣
+                        </span>
+
+                    </div>
+
+
+                    <!-- BACKEND: INFORMAÇÕES -->
+
+                    <div class="book-info">
+
+                        <h3>
+                            Um Defeito de Cor
+                        </h3>
+
+                        <p>
+                            Ana Maria Gonçalves
+                        </p>
+
+
+                        <!-- BACKEND: STATUS -->
+
+                        <span class="status unavailable">
+                            Indisponível
+                        </span>
+
+
+                        <!-- BACKEND: FILA DE ESPERA -->
+
+                        <a
+                            class="book-button disabled"
+                            href="#fila"
+                            data-acao="fila"
+                            data-livro-id="4"
+                        >
+                            Entrar na fila
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESERVA -->
+
+        <section
+            class="forms-area"
+            id="reservar"
+        >
+
+
+            <!-- BACKEND: RESERVA -->
+
+            <div class="form-card">
+
+                <span class="eyebrow">
+                    RESERVA
+                </span>
+
+                <h2>
+                    Reserve um livro
+                </h2>
+
+                <p>
+                    Selecione o livro e envie a solicitação.
+                </p>
+
+
+                <!-- BACKEND: FORMULÁRIO DE RESERVA -->
+
+                <form
+                    class="reserva-form"
+                    id="form-reserva"
+                >
+
+
+                    <label for="livro">
+                        Livro
+                    </label>
+
+
+                    <!-- BACKEND: LIVROS DO MYSQL -->
+
+                    <select
+                        id="livro"
+                        name="livro"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione um livro
+                        </option>
+
+                        <!-- BACKEND: OPÇÕES SERÃO GERADAS PELO JAVASCRIPT -->
+
+                    </select>
+
+
+                    <label for="data">
+                        Data para retirada
+                    </label>
+
+
+                    <input
+                        id="data"
+                        name="data"
+                        type="date"
+                        required
+                    >
+
+
+                    <!-- BACKEND: ENVIAR RESERVA -->
+
+                    <button
+                        type="submit"
+                        id="btn-reserva"
+                    >
+                        Reservar livro
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- BACKEND: EMPRÉSTIMOS DO USUÁRIO -->
+
+            <div
+                class="info-card"
+                id="meu-emprestimo"
+            >
+
+                <span class="eyebrow">
+                    MEU EMPRÉSTIMO
+                </span>
+
+                <h2>
+                    Consulte sua conta
+                </h2>
+
+                <p>
+                    Faça login para acompanhar reservas,
+                    livros emprestados e prazos de devolução.
+                </p>
+
+
+                <!-- BACKEND: CONTA DO USUÁRIO -->
+
+                <a
+                    class="outline-button"
+                    href="./login.html"
+                >
+                    Acessar minha conta
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="footer">
+
+        <span>
+            © BIBLIOTECH — Biblioteca Online
+        </span>
+
+
+        <!-- BACKEND: LOGIN -->
+
+        <a href="./login.html">
+            Login
+        </a>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <!-- BACKEND: JAVASCRIPT DOS LIVROS -->
+
+    <script src="./javascript/livros.js"></script>
+
+</body>
+
+</html>

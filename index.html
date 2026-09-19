@@ -1,59 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="theme-color" content="#252c4d">
     <title>Etec Biblioteca</title>
-
     <link rel="stylesheet" href="./css/home.css">
 </head>
-
 <body>
 
-    <!-- HOTBAR BY KAUAN-->
+    <!-- TRANSIÇÃO -->
+    <div class="page-transition"></div>
 
+    <!-- HOTBAR -->
     <header class="hotbar">
+        <a href="./index.html" class="logo-home" aria-label="Início">
+            <img src="./source/image/logo.png" alt="BIBLIOTECH">
+        </a>
 
-    <div class="logo">
-        CPS
+        <nav class="hotbar-icons" aria-label="Navegação">
+            <a href="./livros.html" title="Biblioteca" aria-label="Biblioteca">⌕</a>
+            <a href="#" title="Configurações" aria-label="Configurações">⚙</a>
+            <a href="./login.html" title="Minha conta" aria-label="Minha conta">👤</a>
+        </nav>
+    </header>
+
+    <!-- BACKGROUND -->
+    <div class="RENDER BACKGROUND" aria-hidden="true">
+        <img src="./source/Arthur/home/Group 631.png" alt="">
     </div>
-
-    <div class="hotbar-icons">
-        <span>⌕</span>
-        <span>⚙</span>
-        <span>👤</span>
-    </div>
-
-    <!--RENDER BACKGROUND-->
-
-    <div class="RENDER BACKGROUND">
-    <img src="./source/Arthur/home/Group 631.png">
-
-    </div>
-
-</header>
 
     <!-- INÍCIO -->
     <main class="container">
-
-        <div class="logo">
-            <img src="./source/image/logo.png" alt="Logo Centro Paula Souza">
+        <div class="central-logo">
+            <img src="./source/image/logo.png" alt="BIBLIOTECH">
         </div>
 
         <div class="texto">
             <h1>BIBLIOTECH</h1>
-
             <h2>Sistema de Biblioteca Online</h2>
         </div>
 
-        <div class="seta">
-            <img src="./source/Arthur/home/Group.png">
+        <div class="seta" aria-hidden="true">
+            <img src="./source/Arthur/home/Group.png" alt="">
         </div>
-
     </main>
 
+    <script src="./javascript/home.js"></script>
 </body>
-
 </html>
