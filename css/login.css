@@ -27,6 +27,27 @@ body {
     color: white;
 }
 
+.RENDER.BACKGROUND {
+    position: fixed;
+    top: 45px;
+    left: 0;
+
+    width: 100%;
+    height: calc(100vh - 45px);
+
+    z-index: -1;
+
+    overflow: hidden;
+}
+
+.RENDER.BACKGROUND img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
 
 /* HOTBAR */
 
